@@ -1,12 +1,20 @@
-# pypi-search-pkg
+# pypi-search-pkg-bot
 
 
 Telegram Bot for Search Packages into PyPi (https://pypi.python.org)
 
 
-_Install API_
+'''Install API'''
 
 ```bash
 $ pip install pyTelegramBotAPI
 ```
+
+'''Execute'''
+
+```bash
+$ ./bot.py
+```
+
+
 
