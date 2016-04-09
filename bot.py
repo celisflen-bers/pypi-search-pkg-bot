@@ -104,7 +104,7 @@ def package_located(pkg):
 
 
 def package_not_found(argument):
-    return "Your search for {argument} find *0* results".format(argument=argument)
+    return "The package *{argument}* not found".format(argument=argument)
 
 
 def list_packages(argument):
@@ -126,6 +126,7 @@ def locate_or_list(argument):
     return too_many_packages(argument, pkgs, count_pkgs)
 
 def package_list(pkgs, count):
+#TODO include web link
     response = "{count} Results:\n".format(count=count) if count>1 else "{count} Result:\n".format(count=count)
     for x in pkgs:
       response += x + "\n"
@@ -133,6 +134,7 @@ def package_list(pkgs, count):
 
 
 def too_many_packages(argument, pkgs, count):
+#TODO include web link
     response = "{} Results. *Some of them are*:\n\n".format(count)
     for x in range(MAX_PACKAGE_RETURN):
       response += " {pkg} *{results[name]} {results[version]}*:  _{results[summary]}_\n\n".format(pkg=emoji_pkg, results=random.choice(pkgs))
